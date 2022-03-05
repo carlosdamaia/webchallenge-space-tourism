@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $heading-sm;
+}
+
+// Visibility
+
+// Hide for tablet or mobile
+.hide-for-mobile {
+    @include breakpoint-max($max-mobile){
+        display: none;
+    }
+}
+
+// Hide for tablet
+.hide-for-tablet {
+    @include breakpoint-min-max($min-tablet, $max-tablet){
+        display: none;
+    }
+}
+
+// Hide for desktop
+.hide-for-desktop {
+    @include breakpoint-min($min-desktop){
+        display: none;
+    }
+}
