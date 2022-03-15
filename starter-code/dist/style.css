@@ -16,7 +16,7 @@ body {
   font-family: "Barlow Condensed", sans-serif;
 }
 
-@media (max-width: 39.8125em) {
+@media (max-width: 39.875em) {
   .hide-for-mobile {
     display: none;
   }
@@ -31,6 +31,25 @@ body {
 @media (min-width: 64.0625em) {
   .hide-for-desktop {
     display: none;
+  }
+}
+
+.page {
+  background-image: url("/assets/home/background-home-mobile.jpg");
+  color: yellow;
+}
+
+@media (min-width: 39.875em) and (max-width: 64em) {
+  .page {
+    background-image: url("/assets/home/background-home-tablet.jpg");
+    color: blue;
+  }
+}
+
+@media (min-width: 64.0625em) {
+  .page {
+    background-image: url("/assets/home/background-home-desktop.jpg");
+    color: black;
   }
 }
 /*# sourceMappingURL=style.css.map */

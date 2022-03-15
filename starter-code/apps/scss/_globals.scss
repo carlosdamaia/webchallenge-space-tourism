@@ -17,7 +17,7 @@ body {
 
 // Visibility
 
-// Hide for tablet or mobile
+// Hide for mobile
 .hide-for-mobile {
     @include breakpoint-max($max-mobile){
         display: none;

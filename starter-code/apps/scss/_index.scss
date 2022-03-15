@@ -1,0 +1,16 @@
+.page {
+    background-image: url('/assets/home/background-home-mobile.jpg');
+    color: yellow;
+
+    // Styles for tablets
+    @media (min-width: 39.875em) and (max-width: 64em) {
+        background-image: url('/assets/home/background-home-tablet.jpg');
+        color: blue;
+    }
+
+    // Styles for desktops
+    @media (min-width: $min-desktop) {
+        background-image: url('/assets/home/background-home-desktop.jpg');
+        color: black;
+    }
+}
