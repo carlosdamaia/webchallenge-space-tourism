@@ -1,16 +1,77 @@
-.page {
+body {
+    background-color: #0B0D19;
     background-image: url('/assets/home/background-home-mobile.jpg');
-    color: yellow;
-
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    
     // Styles for tablets
     @media (min-width: 39.875em) and (max-width: 64em) {
         background-image: url('/assets/home/background-home-tablet.jpg');
-        color: blue;
     }
 
     // Styles for desktops
     @media (min-width: $min-desktop) {
         background-image: url('/assets/home/background-home-desktop.jpg');
-        color: black;
     }
 }
+
+    main {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1.5rem 3rem 1.5rem;
+    }
+
+    .main-div {
+
+        .text-titles {
+
+            .title {
+                font-family: $heading-sm;
+                font-size: 1rem;
+                letter-spacing: 0.16875rem;
+                text-transform: uppercase;
+                margin: 0 0 9% 0;
+            }
+            
+            .call {
+                font-family: 'Bellefair', serif;
+                font-weight: 400;
+                font-size: 5rem;
+                line-height: 6.25rem;
+                color: #ffffff;
+                text-transform: uppercase;
+                margin: 0 0 9% 0;
+            }
+        }
+
+        .text {
+
+            .text-call {
+                font-family: $heading-sm;
+                font-size: 1rem;
+                line-height: 1.5625rem;
+                color: #d0d6f9;
+                margin: 0 0 20% 0;
+            }
+        }
+    }
+
+    .explore {
+
+        .btn-explore {
+            width: 9.375rem;
+            height: 9.375rem;
+            background-color: #ffffff;
+            border: 0;
+            border-radius: 100%;
+            font-family: $heading-big;
+            text-transform: uppercase;
+            letter-spacing: 0.09375rem;
+            font-size: 1.25rem;
+            color: #0B0D17;
+        }
+
+    }
+

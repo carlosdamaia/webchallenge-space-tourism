@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 
 html {
     font-size: 100%;
@@ -13,6 +13,35 @@ body {
     margin: 0;
     padding: 0;
     font-family: $heading-sm;
+    color: #d0d6f9;
+}
+
+.header {
+    position: relative;
+    padding: 1.5rem 1.5rem;
+
+    .header-list {
+        position: absolute;
+        left: 500;
+        overflow-x: hidden;
+    }
+}
+
+// Flexbox
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
 }
 
 // Visibility

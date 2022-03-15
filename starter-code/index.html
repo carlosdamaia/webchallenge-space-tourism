@@ -6,6 +6,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/dist/style.css">
   <title>Space Tourism Website</title>
 
@@ -15,7 +18,7 @@
   <div class="page">
     <header class="header">
 
-      <nav class="main-menu">
+      <nav class="main-menu flex flex-ai-c flex-jc-sb">
 
         <!-- Icon -->
         <a href="/" class="header-logo">
@@ -23,7 +26,7 @@
         </a>
 
         <!-- Hamburguer button -->
-        <a href="/" class="hamburguer-menu">
+        <a href="/" class="hamburguer-menu hide-for-desktop hide-for-tablet">
           <img class="svg-hamburguer" src="/assets/shared/icon-hamburger.svg">
         </a>
       
@@ -49,24 +52,28 @@
       </nav>
     </header>
 
-    <main>
+    <main class="flex flex-jc-c">
 
       <section class="content">
-        <div class="text">
+        <div class="main-div">
 
           <!-- Text home page -->
+          <div class="text-titles">
+            <h5 class="title">So, you want to travel to</h5>
 
-          <h5>So, you want to travel to</h5>
-          <h1>Space</h1>
+            <h1 class="call">Space</h1>
+          </div>
 
-          <p>Let's face it; if you want to go to space, you might as well genuinely go to 
-          outer space and not hover kind of on the edge of it. Well sit back, and relax 
-          because we'll give you a truly out of this world experience!</p>
+          <div class="text">
+            <p class="text-call">Let's face it; if you want to go to space, you might as well genuinely go to 
+            outer space and not hover kind of on the edge of it. Well sit back, and relax 
+            because we'll give you a truly out of this world experience!</p>
+          </div>
 
         </div>
       </section>
 
-      <div class="explore">
+      <div class="explore flex-jc-c">
         <button class="btn-explore">Explore</button>
       </div>
 
