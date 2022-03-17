@@ -1,10 +1,8 @@
-console.log('hello')
-
 const btnHamburguer = document.querySelector('#btnHamburguer');
 const header = document.querySelector('.header');
 const headerList = document.querySelector('#headerList');
 
-header.addEventListener('click', function(){
+btnHamburguer.addEventListener('click', function(){
     console.log('click hamburguer');
 
     if(header.classList.contains('open')){
