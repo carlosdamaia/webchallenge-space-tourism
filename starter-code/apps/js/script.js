@@ -3,7 +3,7 @@ const header = document.querySelector('.header');
 const headerList = document.querySelector('#headerList');
 
 btnHamburguer.addEventListener('click', function(){
-    console.log('click hamburguer');
+    
 
     if(header.classList.contains('open')){
         header.classList.remove('open');
