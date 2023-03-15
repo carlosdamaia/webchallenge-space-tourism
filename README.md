@@ -1,4 +1,4 @@
-# webchallenge-space-tourism
+# Web Challenge Space Tourism
 
 Challenge from FrontMentor
 
