@@ -1,9 +1,85 @@
 @use './variables' as *;
 @use './mixins' as *;
 @use './reset' as *;
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 
 html {
+    font-size: 100%;
+    box-sizing: border-box;
     scroll-behavior: smooth;
+}
 
-    
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $heading-sm;
+    color: #d0d6f9;
+}
+
+.header {
+    position: relative;
+    padding: 1.5rem 1.5rem;
+
+    &-list {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        list-style: none;
+    }
+}
+
+.open {
+
+    .header-list {
+        
+    }
+}
+
+// Flexbox
+.flex {
+    display: flex;
+
+    &Row {
+        flex-direction: row;
+    }
+
+    &JustifyContentSpaceBetween {
+        justify-content: space-between;
+    }
+
+    &JustifyContentCenter {
+        justify-content: center;
+    }
+
+    &AlignItemsCenter {
+        align-items: center;
+    }
+}
+
+// Visibility
+
+// Hide for mobile
+.hideForMobile {
+    @include breakpoint-max($max-mobile){
+        display: none;
+    }
+}
+
+// Hide for tablet
+.hideForTablet {
+    @include breakpoint-min-max($min-tablet, $max-tablet){
+        display: none;
+    }
+}
+
+// Hide for desktop
+.hideForDesktop {
+    @include breakpoint-min($min-desktop){
+        display: none;
+    }
 }

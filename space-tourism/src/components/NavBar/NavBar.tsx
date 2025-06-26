@@ -1,20 +1,17 @@
+import HamburguerButton from '../HamburguerButton/HamburguerButton'
 import styles from './NavBar.module.scss'
 
 export default function NavBar() {
     return (
         <>
             <div className={styles.NavContainer}>
-                <nav className="main-menu flex flex-ai-c flex-jc-sb">
+                <nav className={`${styles.mainMenu} flex flexAlignItemsCenter flexJustifyContentSpaceBetween`}>
 
-                    <a id="btnHamburguer" href="#" className="hamburguer-btn hide-for-desktop hide-for-tablet">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    </a>
+                    <HamburguerButton />
                 
                     <ul id="headerList" className={styles.HeaderList}>
-                    <li className={styles.HeaderListItem}>
-                        <a className={styles.LinkList}><span className={styles.number}>00 </span>Home</a>
+                    <li className={`${styles.headerListItem}`}>
+                        <a className={`${styles.LinkList} flexRow`}><span className={styles.number}>00 </span>Home</a>
                     </li>
 
                     <li className={styles.HeaderListItem}>

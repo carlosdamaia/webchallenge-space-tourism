@@ -19,6 +19,7 @@ export default defineConfig({
         additionalData: `
           @use "src/styles/variables" as *;
           @use "src/styles/mixins" as *;
+          
         `
       }
     }
