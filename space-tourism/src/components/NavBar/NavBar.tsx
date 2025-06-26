@@ -1,29 +1,39 @@
-import HamburguerButton from '../HamburguerButton/HamburguerButton'
+import { Turn as Hamburger } from 'hamburger-react'
 import styles from './NavBar.module.scss'
+import { useState } from 'react';
 
 export default function NavBar() {
+    const [isOpen, setOpen] = useState(false);
     return (
         <>
             <div className={styles.NavContainer}>
-                <nav className={`${styles.mainMenu} flex flexAlignItemsCenter flexJustifyContentSpaceBetween`}>
-
-                    <HamburguerButton />
+                <div 
+                    className={
+                        `${styles.hamburgerButton} 
+                        hideForTablet 
+                        hideForDesktop`
+                    } 
+                >
+                    <Hamburger toggled={isOpen} toggle={setOpen}/>
+                </div>
                 
-                    <ul id="headerList" className={styles.HeaderList}>
+                <nav className={`${styles.mainMenu} ${isOpen ? styles.open : ''}`}>
+                
+                    <ul id="headerList" className={styles.headerList}>
                     <li className={`${styles.headerListItem}`}>
-                        <a className={`${styles.LinkList} flexRow`}><span className={styles.number}>00 </span>Home</a>
+                        <a className={styles.linkList}><span className={styles.number}>00 </span>Home</a>
                     </li>
 
-                    <li className={styles.HeaderListItem}>
-                        <a className={styles.LinkList}><span className={styles.number}>01 </span>Destination</a>
+                    <li className={styles.headerListItem}>
+                        <a className={styles.linkList}><span className={styles.number}>01 </span>Destination</a>
                     </li>
 
-                    <li className={styles.HeaderListItem}>
-                        <a className={styles.LinkList}><span className={styles.number}>02 </span>Crew</a>
+                    <li className={styles.headerListItem}>
+                        <a className={styles.linkList}><span className={styles.number}>02 </span>Crew</a>
                     </li>
 
-                    <li className={styles.HeaderListItem}>
-                        <a className={styles.LinkList}><span className={styles.number}>03 </span>Technology</a>
+                    <li className={styles.headerListItem}>
+                        <a className={styles.linkList}><span className={styles.number}>03 </span>Technology</a>
                     </li>
                     </ul>
                     
