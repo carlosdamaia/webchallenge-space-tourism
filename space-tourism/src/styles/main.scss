@@ -1,0 +1,9 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './reset' as *;
+
+html {
+    scroll-behavior: smooth;
+
+    
+}

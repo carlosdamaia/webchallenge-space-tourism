@@ -1,0 +1,13 @@
+.HomePage {
+    @include breakpoint-max($max-mobile) {
+        background-image: url('../../assets/home/background-home-mobile.jpg');
+    }
+
+    @include breakpoint-min-max($min-tablet, $max-tablet) {
+        background-image: url('../../assets/home/background-home-tablet.jpg');
+    }
+
+    @include breakpoint-min($min-desktop) {
+        background-image: url('../../assets/home/background-home-desktop.jpg');
+    }
+}
