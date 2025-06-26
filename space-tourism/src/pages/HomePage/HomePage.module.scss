@@ -1,6 +1,7 @@
 .HomePage {
     @include breakpoint-max($max-mobile) {
         background-image: url('../../assets/home/background-home-mobile.jpg');
+        
     }
 
     @include breakpoint-min-max($min-tablet, $max-tablet) {
@@ -10,4 +11,11 @@
     @include breakpoint-min($min-desktop) {
         background-image: url('../../assets/home/background-home-desktop.jpg');
     }
+
+    background-color: $dark-blue;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
 }

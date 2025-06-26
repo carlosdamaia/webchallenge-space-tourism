@@ -1,0 +1,64 @@
+.mainSection {
+    flex-grow: 1;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    .textDiv {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .callout {
+            text-transform: uppercase;
+            color: $ice;
+            font-family: $heading-sm;
+            font-weight: 400;
+            line-height: auto;
+            font-size: 1rem;
+            letter-spacing: 15%;
+        }
+
+        .title {
+            text-transform: uppercase;
+            font-family: $heading-big-simple;
+            font-weight: 400;
+            line-height: auto;
+            color: $white;
+            font-size: 5rem;
+            letter-spacing: 0;
+        }
+
+        .text {
+            font-family: 'Barlow', sans-serif;
+            color: $ice;
+            font-size: 0.938rem;
+            letter-spacing: 0;
+            line-height: 180%;
+        }
+    }
+
+    .buttonDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .exploreButton {
+            font-family: $heading-big;
+            font-size: 1.125rem;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            border-radius: 999px;
+            background-color: $white;
+            color: $dark-blue;
+            width: 144px;
+            height: 144px;
+            transition: box-shadow .3s ease-in-out;
+
+            &:hover {
+                box-shadow: 0 0 0 44px rgba(255, 255, 255, 0.1);
+            }
+        }
+    }
+}

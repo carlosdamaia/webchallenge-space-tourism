@@ -14,7 +14,7 @@ export default function NavBar() {
                         hideForDesktop`
                     } 
                 >
-                    <Hamburger toggled={isOpen} toggle={setOpen}/>
+                    <Hamburger color={'#D0D6F9'} toggled={isOpen} toggle={setOpen}/>
                 </div>
                 
                 <nav className={`${styles.mainMenu} ${isOpen ? styles.open : ''}`}>
