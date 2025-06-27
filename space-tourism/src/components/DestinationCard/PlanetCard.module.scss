@@ -1,0 +1,42 @@
+.cardContainer {
+    .tabs {
+        .tabButton {
+            text-transform: uppercase;
+            font-family: $heading-sm;
+            color: $ice;
+
+            &.active {
+                color: $white;
+            }
+        }
+    }
+
+    .planetInfo {
+        .planetName {
+            color: $white;
+            font-family: $heading-big-simple;
+            text-transform: uppercase;
+        }
+
+        .planetDescription {
+            color: $ice;
+            font-family: $heading-sm-simple;
+        }
+
+        .detailsContainer {
+            .detailedItem {
+                .detailsTitle {
+                    text-transform: uppercase;
+                    color: $ice;
+                    font-family: $heading-sm-simple;
+                }
+
+                .details {
+                    text-transform: uppercase;
+                    color: $white;
+                    font-family: $heading-big-simple;
+                }
+            }
+        }
+    }
+}

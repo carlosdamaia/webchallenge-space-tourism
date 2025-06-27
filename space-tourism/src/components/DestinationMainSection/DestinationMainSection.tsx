@@ -4,9 +4,9 @@ import PlanetCard from '../DestinationCard/PlanetCard';
 export default function DestinationMainSection() {
     return (
         <>
-            <div className={styles.titleAndImage}>
-                <h1>
-                    <span>
+            <div className={styles.titleContainer}>
+                <h1 className={styles.title}>
+                    <span className={styles.number}>
                         01
                     </span>
                     Pick Your Destination
