@@ -14,6 +14,11 @@
             color: $ice;
             position: relative;
             display: inline-block;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $white;
+            }
 
             &::after {
                 content: '';
@@ -22,8 +27,13 @@
                 transition: all 0.3s ease;
             }
 
-            &.active {
-                color: $white;
+            &:hover::after, &.active::after {
+                background-color: $white;
+            }
+
+            &.activeBlurred.active::after {
+                background-color: rgba(255, 255, 255, .5);
+                
             }
 
             @include breakpoint-min($min-tablet) {
@@ -39,11 +49,6 @@
 
                 &:hover::after, &.active::after {
                     transform: translateX(-50%) scaleX(1);
-                    background-color: $white;
-                }
-
-                &.activeBlurred.active::after {
-                    background-color: rgba(255, 255, 255, .5);
                 }
             }
         }
