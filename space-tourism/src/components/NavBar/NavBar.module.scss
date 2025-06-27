@@ -79,7 +79,8 @@
                             transform-origin: center;
                         }
 
-                        &:hover::after {
+                        &:hover::after, 
+                        &.active::after {
                             transform: translateX(-50%) scaleX(1);
                         }
                     }
@@ -126,7 +127,8 @@
                         transform: translateY(-50%);
                     }
 
-                    &:hover::after {
+                    &:hover::after, 
+                    &.active::after {
                         height: 100%;
                     }
                 }

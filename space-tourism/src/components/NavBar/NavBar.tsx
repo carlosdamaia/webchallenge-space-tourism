@@ -1,7 +1,7 @@
 import { Turn as Hamburger } from 'hamburger-react'
 import styles from './NavBar.module.scss'
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export default function NavBar() {
     const [isOpen, setOpen] = useState(false);
@@ -22,39 +22,59 @@ export default function NavBar() {
                 
                     <ul id="headerList" className={styles.headerList}>
                     <li className={`${styles.headerListItem}`}>
-                        <Link to="/" className={styles.linkList}>
+                        <NavLink 
+                            to="/" 
+                            className={({ isActive }) =>
+                                `${styles.linkList} ${isActive ? styles.active : ''}`
+                            }
+                        >
                             <span className={`${styles.number} hideForTablet`}>
                                 00 
                             </span>
                                 Home
-                        </Link>
+                        </NavLink>
                     </li>
 
                     <li className={styles.headerListItem}>
-                        <Link to="/destination" className={styles.linkList}>
+                        <NavLink 
+                            to="/destination" 
+                            className={({ isActive }) =>
+                                `${styles.linkList} ${isActive ? styles.active : ''}`
+                            }
+                        >
                             <span className={`${`${styles.number} hideForTablet`} hideForTablet`}>
                                 01 
                             </span>
                                 Destination
-                        </Link>
+                        </NavLink>
                     </li>
 
                     <li className={styles.headerListItem}>
-                        <Link to="#" className={styles.linkList}>
+                        <NavLink 
+                            to="/crew" 
+                            className={({ isActive }) =>
+                                `${styles.linkList} ${isActive ? styles.active : ''}`
+                            }
+                        >
                             <span className={`${styles.number} hideForTablet`}>
                                 02 
                             </span>
                                 Crew
-                        </Link>
+                        </NavLink>
                     </li>
 
                     <li className={styles.headerListItem}>
-                        <Link to="#" className={styles.linkList}>
+                        <NavLink 
+                            to="/technology" 
+                            className={({ isActive }) =>
+                                `${styles.linkList} ${isActive ? styles.active : ''}`
+                            }
+                        >
                             <span className={`${styles.number} hideForTablet`}>
                                 03 
                             </span>
                                 Technology
-                        </Link>
+                        </NavLink>
                     </li>
                     </ul>
                     
