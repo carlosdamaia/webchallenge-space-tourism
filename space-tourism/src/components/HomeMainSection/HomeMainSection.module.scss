@@ -6,7 +6,15 @@
 
     @include breakpoint-min-max($min-tablet, $max-tablet) {
         justify-content: space-around;
-        padding: 2.5rem 9.938rem;
+        padding: 2.5rem 4rem;
+    }
+
+    @include breakpoint-min($min-desktop) {
+        text-align: start;
+        flex-direction: row;
+        padding: 0 0 131px 0;
+        align-items: end;
+        justify-content: space-around;
     }
 
     .textDiv {
@@ -45,7 +53,7 @@
             transition: box-shadow .3s ease-in-out;
 
             &:hover {
-                box-shadow: 0 0 0 44px rgba(255, 255, 255, 0.1);
+                box-shadow: 0 0 0 50px rgba(255, 255, 255, 0.1);
             }
         }
     }
@@ -90,11 +98,8 @@
     }
 
     @include breakpoint-min-max($min-tablet, $max-tablet) {
-        //justify-content: space-around;
-
         .textDiv {
             gap: 1.5rem;
-            //margin: 9.938rem 6.625rem;
 
             .callout {
                 font-weight: 400;
@@ -123,6 +128,44 @@
                 letter-spacing: 2px;
                 width: 242px;
                 height: 242px;
+            }
+        }
+    }
+
+    @include breakpoint-min($min-desktop) {
+        //justify-content: flex-end;
+
+        .textDiv {
+            width: 450px;
+            gap: 1.5rem;
+
+            .callout {
+                font-weight: 400;
+                line-height: auto;
+                font-size: 1.75rem;
+                letter-spacing: 0.295rem;
+            }
+
+            .title {
+                font-weight: 400;
+                line-height: auto;
+                font-size: 9.375rem;
+                letter-spacing: 0;
+            }
+
+            .text {
+                font-size: 1.125rem;
+                letter-spacing: 0;
+                line-height: 2rem;
+            }
+        }
+
+        .buttonDiv {
+            .exploreButton {
+                font-size: 2rem;
+                letter-spacing: 0.125rem;
+                width: 274px;
+                height: 274px;
             }
         }
     }
