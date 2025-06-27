@@ -11,8 +11,6 @@
         backdrop-filter: blur(10px);
 
         @include breakpoint-min-max($min-tablet, $max-tablet) {
-            //padding: 2.969rem;
-
             .headerList {
                 gap: 2.5rem;
                 padding: 2.25rem 3rem;
@@ -35,8 +33,32 @@
                 text-transform: uppercase;
 
                 .linkList {
+                    position: relative;
+                    display: block;
                     font-family: $heading-sm;
                     cursor: pointer;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-color: $white;
+                        transition: all 0.3s ease;
+                    }
+
+                    @include breakpoint-min-max($min-tablet, $max-tablet) {
+                        &::after {
+                            bottom: -2.25rem;
+                            left: 50%;
+                            width: 100%;
+                            height: 3px;
+                            transform: translateX(-50%) scaleX(0);
+                            transform-origin: center;
+                        }
+
+                        &:hover::after {
+                            transform: translateX(-50%) scaleX(1);
+                        }
+                    }
                 }
             }
         }
@@ -68,22 +90,16 @@
                 display: inline-block;
 
                 .linkList {
-                    position: relative;
-                    display: block;
                     font-weight: 400;
                     letter-spacing: 0.125rem;
-                    
 
                     &::after {
-                        content: '';
-                        position: absolute;
                         right: 0;
                         top: 50%;
                         width: 4px;
                         height: 0;
                         background-color: $white;
                         transform: translateY(-50%);
-                        transition: height 0.3s ease;
                     }
 
                     &:hover::after {
