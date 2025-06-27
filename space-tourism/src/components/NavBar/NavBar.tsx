@@ -1,6 +1,7 @@
 import { Turn as Hamburger } from 'hamburger-react'
 import styles from './NavBar.module.scss'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
     const [isOpen, setOpen] = useState(false);
@@ -21,19 +22,39 @@ export default function NavBar() {
                 
                     <ul id="headerList" className={styles.headerList}>
                     <li className={`${styles.headerListItem}`}>
-                        <a className={styles.linkList}><span className={`${styles.number} hideForTablet`}>00 </span>Home</a>
+                        <Link to="/" className={styles.linkList}>
+                            <span className={`${styles.number} hideForTablet`}>
+                                00 
+                            </span>
+                                Home
+                        </Link>
                     </li>
 
                     <li className={styles.headerListItem}>
-                        <a className={styles.linkList}><span className={`${`${styles.number} hideForTablet`} hideForTablet`}>01 </span>Destination</a>
+                        <Link to="/destination" className={styles.linkList}>
+                            <span className={`${`${styles.number} hideForTablet`} hideForTablet`}>
+                                01 
+                            </span>
+                                Destination
+                        </Link>
                     </li>
 
                     <li className={styles.headerListItem}>
-                        <a className={styles.linkList}><span className={`${styles.number} hideForTablet`}>02 </span>Crew</a>
+                        <Link to="#" className={styles.linkList}>
+                            <span className={`${styles.number} hideForTablet`}>
+                                02 
+                            </span>
+                                Crew
+                        </Link>
                     </li>
 
                     <li className={styles.headerListItem}>
-                        <a className={styles.linkList}><span className={`${styles.number} hideForTablet`}>03 </span>Technology</a>
+                        <Link to="#" className={styles.linkList}>
+                            <span className={`${styles.number} hideForTablet`}>
+                                03 
+                            </span>
+                                Technology
+                        </Link>
                     </li>
                     </ul>
                     

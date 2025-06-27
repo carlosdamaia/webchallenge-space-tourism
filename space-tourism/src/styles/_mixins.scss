@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 @mixin breakpoint-min($min-desktop){
     @media (min-width: $min-desktop){
         @content;
@@ -13,5 +15,28 @@
 @mixin breakpoint-max($max-mobile){
     @media (max-width: $max-mobile){
         @content;
+    }
+}
+
+@mixin page-background($page-name) {
+    background-color: $dark-blue;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    @include breakpoint-max($max-mobile) {
+        background-image: url('./../assets/#{$page-name}/background-#{$page-name}-mobile.jpg');
+    }
+    
+    @include breakpoint-min-max($min-tablet, $max-tablet) {
+        background-image: url('./../assets/#{$page-name}/background-#{$page-name}-tablet.jpg');
+    }
+    
+    @include breakpoint-min($min-desktop) {
+        background-image: url('./../assets/#{$page-name}/background-#{$page-name}-desktop.jpg');
     }
 }
