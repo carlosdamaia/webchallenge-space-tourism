@@ -1,12 +1,13 @@
-import styles from './PlanetCard.module.scss'
+import styles from './DestinationCard.module.scss'
 import data from '../../../../starter-code/data.json'
 import { useState } from 'react';
 import { planetImages } from '../../types/images';
 
 const destinations = data.destinations;
 
-export default function PlanetCard() {
+export default function DestinationCard() {
     const [selectedPlanet, setSelectedPlanet] = useState(destinations[0]);
+    const [hovered, setHovered] = useState<string | null>(null);
 
     return (
         <div className={styles.cardContainer}>
@@ -18,17 +19,25 @@ export default function PlanetCard() {
             </div>
 
             <div className={styles.tabs}>
-                {destinations.map((planet) =>
+                {destinations.map((planet) => (
                     <button
-                        key={planet.name}
-                        className={`${styles.tabButton} ${
-                            selectedPlanet.name === planet.name ? styles.active : ''
-                        }`}
-                        onClick={() => setSelectedPlanet(planet)}
+                    key={planet.name}
+                    className={`
+                        ${styles.tabButton}
+                        ${selectedPlanet.name === planet.name ? styles.active : ''}
+                        ${
+                        selectedPlanet.name === planet.name && hovered && hovered !== planet.name
+                            ? styles.activeBlurred
+                            : ''
+                        }
+                    `}
+                    onClick={() => setSelectedPlanet(planet)}
+                    onMouseEnter={() => setHovered(planet.name)}
+                    onMouseLeave={() => setHovered(null)}
                     >
-                        {planet.name}
+                    {planet.name}
                     </button>
-                )}
+                ))}
             </div>
 
             <div className={styles.planetInfo}>

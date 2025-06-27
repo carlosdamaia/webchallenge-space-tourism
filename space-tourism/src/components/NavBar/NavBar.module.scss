@@ -87,7 +87,7 @@
 
                         &:hover::after, &.active::after {
                             transform: translateX(-50%) scaleX(1);
-                            background-color: $white; // cor do hover
+                            background-color: $white;
                         }
 
                         &.activeBlurred.active::after {

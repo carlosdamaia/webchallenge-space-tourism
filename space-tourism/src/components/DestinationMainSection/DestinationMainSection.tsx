@@ -1,5 +1,5 @@
 import styles from './DestinationMainSection.module.scss'
-import PlanetCard from '../DestinationCard/PlanetCard';
+import DestinationCard from '../DestinationCard/DestinationCard';
 
 export default function DestinationMainSection() {
     return (
@@ -12,7 +12,7 @@ export default function DestinationMainSection() {
                     Pick Your Destination
                 </h1>
             </div>
-            <PlanetCard />
+            <DestinationCard />
         </div>
     )
 }
