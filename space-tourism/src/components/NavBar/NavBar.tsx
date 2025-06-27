@@ -21,19 +21,19 @@ export default function NavBar() {
                 
                     <ul id="headerList" className={styles.headerList}>
                     <li className={`${styles.headerListItem}`}>
-                        <a className={styles.linkList}><span className={styles.number}>00 </span>Home</a>
+                        <a className={styles.linkList}><span className={`${styles.number} hideForTablet`}>00 </span>Home</a>
                     </li>
 
                     <li className={styles.headerListItem}>
-                        <a className={styles.linkList}><span className={styles.number}>01 </span>Destination</a>
+                        <a className={styles.linkList}><span className={`${`${styles.number} hideForTablet`} hideForTablet`}>01 </span>Destination</a>
                     </li>
 
                     <li className={styles.headerListItem}>
-                        <a className={styles.linkList}><span className={styles.number}>02 </span>Crew</a>
+                        <a className={styles.linkList}><span className={`${styles.number} hideForTablet`}>02 </span>Crew</a>
                     </li>
 
                     <li className={styles.headerListItem}>
-                        <a className={styles.linkList}><span className={styles.number}>03 </span>Technology</a>
+                        <a className={styles.linkList}><span className={`${styles.number} hideForTablet`}>03 </span>Technology</a>
                     </li>
                     </ul>
                     
