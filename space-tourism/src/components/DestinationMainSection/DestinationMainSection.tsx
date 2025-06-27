@@ -3,7 +3,7 @@ import PlanetCard from '../DestinationCard/PlanetCard';
 
 export default function DestinationMainSection() {
     return (
-        <>
+        <div className={styles.destinationMainSection}>
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>
                     <span className={styles.number}>
@@ -13,6 +13,6 @@ export default function DestinationMainSection() {
                 </h1>
             </div>
             <PlanetCard />
-        </>
+        </div>
     )
 }

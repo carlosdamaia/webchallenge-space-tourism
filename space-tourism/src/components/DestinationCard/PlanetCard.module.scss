@@ -1,12 +1,34 @@
 .cardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     .tabs {
         .tabButton {
             text-transform: uppercase;
             font-family: $heading-sm;
             color: $ice;
+            position: relative;
+            display: inline-block;
+
+            /*&::after {
+                content: '';
+                position:absolute;
+                background-color: $;
+            }*/
 
             &.active {
                 color: $white;
+            }
+        }
+    }
+
+    .planetImg {
+        .planetPng {
+            @include breakpoint-max($max-mobile) {
+                width: 170px;
+                height: 170px;
             }
         }
     }

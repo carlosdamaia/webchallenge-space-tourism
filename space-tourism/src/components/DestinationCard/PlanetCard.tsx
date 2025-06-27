@@ -1,12 +1,7 @@
 import styles from './PlanetCard.module.scss'
 import data from '../../../../starter-code/data.json'
 import { useState } from 'react';
-import moonPng from '../../assets/destination/image-moon.png';
-
-const planetImages: Record<string, string> = {
-  Moon: moonPng,
-  // etc.
-};
+import { planetImages } from '../../types/images';
 
 const destinations = data.destinations;
 
@@ -15,6 +10,13 @@ export default function PlanetCard() {
 
     return (
         <div className={styles.cardContainer}>
+            <div className={styles.planetImg}>
+                <img 
+                    className={styles.planetPng}
+                    src={planetImages[selectedPlanet.name]} 
+                />
+            </div>
+
             <div className={styles.tabs}>
                 {destinations.map((planet) =>
                     <button
@@ -27,10 +29,6 @@ export default function PlanetCard() {
                         {planet.name}
                     </button>
                 )}
-            </div>
-
-            <div className={styles.planetImg}>
-                <img src={planetImages[selectedPlanet.name]} />
             </div>
 
             <div className={styles.planetInfo}>

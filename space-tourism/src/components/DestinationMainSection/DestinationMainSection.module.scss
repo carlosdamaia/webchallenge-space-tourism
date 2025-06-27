@@ -1,37 +1,45 @@
-.titleContainer {
-    font-family: $heading-sm;
-    text-transform: uppercase;
+.destinationMainSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    .title {
-        display: flex;
-        flex-direction: row;
-        color: $white;
-        font-weight: 400;
-    }
-
-    .number {
-        font-weight: bold;
-        color: rgba($color: $white, $alpha: .25);
-    }
-
-    @include breakpoint-max($max-mobile) {
+    .titleContainer {
+        font-family: $heading-sm;
+        text-transform: uppercase;
+    
         .title {
-            gap: 1.125rem;
-            font-size: 1rem;
-            line-height: auto;
-            letter-spacing: 0.169rem;
-
-            .number {
-                
+            display: flex;
+            flex-direction: row;
+            color: $white;
+            font-weight: 400;
+        }
+    
+        .number {
+            font-weight: bold;
+            color: rgba($color: $white, $alpha: .25);
+        }
+    
+        @include breakpoint-max($max-mobile) {
+            .title {
+                gap: 1.125rem;
+                font-size: 1rem;
+                line-height: auto;
+                letter-spacing: 0.169rem;
+    
+                .number {
+                    
+                }
             }
+        }
+    
+        @include breakpoint-min-max($min-tablet, $max-tablet) {
+            
+        }
+    
+        @include breakpoint-min($min-desktop) {
+            
         }
     }
 
-    @include breakpoint-min-max($min-tablet, $max-tablet) {
-        
-    }
-
-    @include breakpoint-min($min-desktop) {
-        
-    }
 }

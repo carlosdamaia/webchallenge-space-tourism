@@ -18,6 +18,16 @@
     }
 }
 
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
 @mixin page-background($page-name) {
     background-color: $dark-blue;
     height: 100%;
