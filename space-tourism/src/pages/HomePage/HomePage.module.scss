@@ -5,6 +5,8 @@
     background-attachment: fixed;
     background-position: center;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 
     @include breakpoint-max($max-mobile) {
         background-image: url('../../assets/home/background-home-mobile.jpg');
