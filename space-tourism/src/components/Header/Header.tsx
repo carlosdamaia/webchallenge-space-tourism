@@ -6,6 +6,7 @@ export default function Header() {
     return(
         <header className={styles.Header}>
             <img src={logo} alt='Logo'/>
+            <div className={`${styles.divider} hideForTablet hideForMobile`} />
             <NavBar />
         </header>
     )

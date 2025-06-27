@@ -25,6 +25,25 @@
             }
         }
 
+        @include breakpoint-min($min-desktop) {
+            .headerList {
+                gap: 3rem;
+                padding: 38.5px 144px;
+
+                .headerListItem {
+                    font-size: 1rem;
+
+                    .linkList {
+                        letter-spacing: 0.169rem;
+
+                        .number {
+                            padding-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+
         .headerList {
             color: $white;
             display: flex;
@@ -44,8 +63,13 @@
                         background-color: $white;
                         transition: all 0.3s ease;
                     }
+                    
+                    .number {
+                        font-weight: bold;
+                        letter-spacing: 0.169rem;
+                    }
 
-                    @include breakpoint-min-max($min-tablet, $max-tablet) {
+                    @include breakpoint-min($min-tablet) {
                         &::after {
                             bottom: -2.25rem;
                             left: 50%;
@@ -105,15 +129,8 @@
                     &:hover::after {
                         height: 100%;
                     }
-
-                    .number {
-                        font-weight: bold;
-                        letter-spacing: 0.169rem;
-                    }
                 }
             }
         }
-
-        
     }
 }
