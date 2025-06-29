@@ -1,8 +1,5 @@
 import styles from './TabsButton.module.scss'
-import data from '../../../../../../starter-code/data.json'
 import { useState } from 'react';
-
-const destinations = data.destinations;
 
 type TabsButtonProps = {
   destinations: { name: string }[];

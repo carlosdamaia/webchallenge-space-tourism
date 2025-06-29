@@ -1,0 +1,67 @@
+.tabs {
+    @include flex-row;
+
+    .tabButton {
+        padding: 0;
+        text-transform: uppercase;
+        font-family: $heading-sm;
+        color: $ice;
+        position: relative;
+        display: inline-block;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $white;
+        }
+
+        &::after {
+            content: '';
+            position:absolute;
+            background-color: $white;
+            transition: all 0.3s ease;
+        }
+
+        &:hover::after, &.active::after {
+            background-color: $white;
+        }
+
+        &.activeBlurred.active::after {
+            background-color: rgba(255, 255, 255, .5);
+            
+        }
+
+    }
+
+    @include breakpoint-max($max-mobile) {
+
+    }
+
+    @include breakpoint-min($min-tablet) {
+        .tabButton {
+            &::after {
+                bottom: -0.5rem;
+                left: 50%;
+                width: 100%;
+                height: 3px;
+                background-color: transparent;
+                transform: translateX(-50%) scaleX(0);
+                transform-origin: center;
+            }
+    
+            &:hover::after, &.active::after {
+                transform: translateX(-50%) scaleX(1);
+            }
+
+        }
+    }
+
+    @include breakpoint-min($min-desktop) {
+        gap: 2rem;
+
+        .tabButton {
+            font-size: 1rem;
+            letter-spacing: 2px;
+            line-height: auto;
+        }
+    }
+}

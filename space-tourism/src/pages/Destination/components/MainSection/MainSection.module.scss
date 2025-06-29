@@ -1,6 +1,4 @@
 .destinationMainSection {
-    display: flex;
-    flex-grow: 1;
 
     @include breakpoint-max($max-mobile) {
         padding: 1.5rem;
@@ -11,8 +9,10 @@
     }
     
     @include breakpoint-min($min-desktop) {
-        padding: 3rem 0;
         @include flex-column;
+        height: 100%;
+        gap: 1.5rem;
+        padding: 3rem;
     }
 
     .titleContainer {

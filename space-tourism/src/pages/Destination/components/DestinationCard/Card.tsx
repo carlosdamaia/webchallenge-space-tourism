@@ -19,18 +19,24 @@ export default function Card() {
             </div>
 
             <div className={styles.planetInfo}>
+                
                 <TabsButton 
                     destinations={destinations}
                     selectedPlanet={selectedPlanet}
                     setSelectedPlanet={setSelectedPlanet}
                 />
 
-                <h2 className={styles.planetName}>
-                    {selectedPlanet.name}
-                </h2>
-                <p className={styles.planetDescription}>
-                    {selectedPlanet.description}
-                </p>
+                <div className={styles.planetMainInfo}>
+                    <h2 className={styles.planetName}>
+                        {selectedPlanet.name}
+                    </h2>
+                    <p className={styles.planetDescription}>
+                        {selectedPlanet.description}
+                    </p>
+                </div>
+
+                <div className={styles.divider}></div>
+
                 <div className={styles.detailsContainer}>
 
                     <div className={styles.detailedItem}>
