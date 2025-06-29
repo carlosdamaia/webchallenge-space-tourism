@@ -1,8 +1,19 @@
 .destinationMainSection {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-grow: 1;
+
+    @include breakpoint-max($max-mobile) {
+        padding: 1.5rem;
+    }
+
+    @include breakpoint-min-max($min-tablet, $max-tablet) {
+
+    }
+    
+    @include breakpoint-min($min-desktop) {
+        padding: 3rem 0;
+        @include flex-column;
+    }
 
     .titleContainer {
         font-family: $heading-sm;
@@ -26,19 +37,25 @@
                 font-size: 1rem;
                 line-height: auto;
                 letter-spacing: 0.169rem;
-    
-                .number {
-                    
-                }
             }
         }
     
         @include breakpoint-min-max($min-tablet, $max-tablet) {
-            
+            .title {
+                gap: 1.5rem;
+                font-size: 1.25rem;
+                line-height: auto;
+                letter-spacing: 15%;
+            }
         }
     
         @include breakpoint-min($min-desktop) {
-            
+            .title {
+                gap: 1.5rem;
+                font-size: 1.75rem;
+                line-height: auto;
+                letter-spacing: 0.25rem;
+            }
         }
     }
 

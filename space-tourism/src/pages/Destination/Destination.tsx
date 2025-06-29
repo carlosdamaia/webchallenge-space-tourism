@@ -1,4 +1,4 @@
-import DestinationMainSection from '../../components/DestinationMainSection/DestinationMainSection'
+import DestinationMainSection from './components/MainSection/MainSection'
 import Header from '../../components/Header/Header'
 import styles from './Destination.module.scss'
 

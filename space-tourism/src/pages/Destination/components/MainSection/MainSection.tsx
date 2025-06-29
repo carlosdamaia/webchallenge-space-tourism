@@ -1,5 +1,5 @@
-import styles from './DestinationMainSection.module.scss'
-import DestinationCard from '../DestinationCard/DestinationCard';
+import styles from './MainSection.module.scss'
+import DestinationCard from '../DestinationCard/Card';
 
 export default function DestinationMainSection() {
     return (

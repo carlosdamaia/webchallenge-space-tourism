@@ -1,13 +1,13 @@
-import styles from './DestinationCard.module.scss'
-import data from '../../../../starter-code/data.json'
+import styles from './Card.module.scss'
+import data from '../../../../../../starter-code/data.json'
 import { useState } from 'react';
-import { planetImages } from '../../types/images';
+import { planetImages } from '../../../../types/images';
+import TabsButton from '../TabsButton/TabsButton';
 
 const destinations = data.destinations;
 
-export default function DestinationCard() {
+export default function Card() {
     const [selectedPlanet, setSelectedPlanet] = useState(destinations[0]);
-    const [hovered, setHovered] = useState<string | null>(null);
 
     return (
         <div className={styles.cardContainer}>
@@ -18,29 +18,13 @@ export default function DestinationCard() {
                 />
             </div>
 
-            <div className={styles.tabs}>
-                {destinations.map((planet) => (
-                    <button
-                    key={planet.name}
-                    className={`
-                        ${styles.tabButton}
-                        ${selectedPlanet.name === planet.name ? styles.active : ''}
-                        ${
-                        selectedPlanet.name === planet.name && hovered && hovered !== planet.name
-                            ? styles.activeBlurred
-                            : ''
-                        }
-                    `}
-                    onClick={() => setSelectedPlanet(planet)}
-                    onMouseEnter={() => setHovered(planet.name)}
-                    onMouseLeave={() => setHovered(null)}
-                    >
-                    {planet.name}
-                    </button>
-                ))}
-            </div>
-
             <div className={styles.planetInfo}>
+                <TabsButton 
+                    destinations={destinations}
+                    selectedPlanet={selectedPlanet}
+                    setSelectedPlanet={setSelectedPlanet}
+                />
+
                 <h2 className={styles.planetName}>
                     {selectedPlanet.name}
                 </h2>
