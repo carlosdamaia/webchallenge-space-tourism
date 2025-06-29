@@ -4,7 +4,24 @@
     }
 
     @include breakpoint-min-max($min-tablet, $max-tablet) {
+        flex: 1;
+        @include flex-column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
 
+        .divider {
+            height: 1px;
+            width: 100%;
+            background-color: $white;
+            opacity: .25;
+        }
+
+        .detailsContainer {
+            display: flex;
+            gap: 24px;
+            justify-content: space-around;
+        }
     }
     
     @include breakpoint-min($min-desktop) {
@@ -101,7 +118,29 @@
         }
 
         @include breakpoint-min-max($min-tablet, $max-tablet) {
+            .planetName {
+                font-size: 5rem;
+                line-height: auto;
+                letter-spacing: 0;
+            }
 
+            .planetDescription {
+                font-size: 1rem;
+                line-height: 180%;
+                letter-spacing: 0px;
+            }
+
+            .detailsTitle {
+                font-size: 0.875rem;
+                line-height: auto;
+                letter-spacing: 0.125rem;
+            }
+
+            .details {
+                font-size: 1.75rem;
+                line-height: auto;
+                letter-spacing: 0;
+            }
         }
 
         @include breakpoint-min($min-desktop) {

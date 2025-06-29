@@ -1,16 +1,18 @@
 .destinationMainSection {
+    height: 100%;
 
     @include breakpoint-max($max-mobile) {
         padding: 1.5rem;
     }
 
     @include breakpoint-min-max($min-tablet, $max-tablet) {
-
+        @include flex-column;
+        padding: 2.5rem;
+        gap: 24px;
     }
     
     @include breakpoint-min($min-desktop) {
         @include flex-column;
-        height: 100%;
         gap: 1.5rem;
         padding: 3rem;
     }

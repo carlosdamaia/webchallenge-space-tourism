@@ -37,7 +37,13 @@
     }
 
     @include breakpoint-min($min-tablet) {
+        justify-content: center;
+
         .tabButton {
+            font-size: 1rem;
+            letter-spacing: 2px;
+            line-height: auto;
+
             &::after {
                 bottom: -0.5rem;
                 left: 50%;
