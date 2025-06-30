@@ -1,0 +1,22 @@
+.mainSection {
+    flex: 1;
+
+    @include breakpoint-max($max-mobile) {
+        @include flex-column;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    @include breakpoint-min-max($min-tablet, $max-tablet) {
+        @include flex-column;
+        gap: 1.5rem;
+        padding: 2.5rem;
+    }
+
+    @include breakpoint-min($min-desktop) {
+        @include flex-column;
+        gap: 1.5rem;
+        padding: 3rem;
+        //justify-content: space-between;
+    }
+}

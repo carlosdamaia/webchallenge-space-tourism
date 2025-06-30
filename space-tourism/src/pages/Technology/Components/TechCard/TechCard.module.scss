@@ -1,0 +1,26 @@
+.cardContainer {
+
+}
+
+.rankAndName {
+    font-family: $heading-big-simple;
+
+    h1 {
+        color: rgba($color: $white, $alpha: 1.0)
+    }
+
+    h2 {
+        color: rgba($color: $white, $alpha: .5)
+    }
+}
+
+.tabs {
+    @include flex-column;
+    gap: 20px;
+}
+
+.tabsButton {
+    background-color: $white;
+    width: 15px;
+    height: 15px;
+}
