@@ -1,7 +1,35 @@
 .cardContainer {
-    @include breakpoint-max($max-mobile) {
-
+    .divider {
+        height: 1px;
+        width: 100%;
+        background-color: $white;
+        opacity: .25;
     }
+
+    @include breakpoint-max($max-mobile) {
+        flex: 1;
+        @include flex-column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+        justify-content: center;
+
+        .planetInfo {
+            @include flex-column;
+            gap: 24px;
+
+            .planetMainInfo {
+                justify-content: center;
+            }
+        }
+
+        .detailsContainer {
+            @include flex-column;
+            gap: 24px;
+            justify-content: space-around;
+        }
+    }
+
 
     @include breakpoint-min-max($min-tablet, $max-tablet) {
         flex: 1;
@@ -15,13 +43,8 @@
         .planetInfo {
             @include flex-column;
             gap: 24px;
-        }
 
-        .divider {
-            height: 1px;
-            width: 100%;
-            background-color: $white;
-            opacity: .25;
+            
         }
 
         .detailsContainer {
@@ -122,7 +145,29 @@
         }
 
         @include breakpoint-max($max-mobile) {
+            .planetName {
+                font-size: 3.5rem;
+                line-height: auto;
+                letter-spacing: 0;
+            }
 
+            .planetDescription {
+                font-size: 0.938rem;
+                line-height: 180%;
+                letter-spacing: 0px;
+            }
+
+            .detailsTitle {
+                font-size: 0.875rem;
+                line-height: auto;
+                letter-spacing: 0.125rem;
+            }
+
+            .details {
+                font-size: 1.75rem;
+                line-height: auto;
+                letter-spacing: 0;
+            }
         }
 
         @include breakpoint-min-max($min-tablet, $max-tablet) {

@@ -3,6 +3,7 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    height: 100%;
 
     @include breakpoint-min-max($min-tablet, $max-tablet) {
         justify-content: space-around;
