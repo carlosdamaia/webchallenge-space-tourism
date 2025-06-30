@@ -6,9 +6,16 @@
     @include breakpoint-min-max($min-tablet, $max-tablet) {
         flex: 1;
         @include flex-column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         text-align: center;
+        gap: 8px;
+        padding: 0 5rem;
+
+        .planetInfo {
+            @include flex-column;
+            gap: 24px;
+        }
 
         .divider {
             height: 1px;
@@ -73,7 +80,8 @@
             }
 
             @include breakpoint-min-max($min-tablet, $max-tablet) {
-
+                max-width: 300px;
+                max-height: 300px;
             }
 
             @include breakpoint-min($min-desktop) {
