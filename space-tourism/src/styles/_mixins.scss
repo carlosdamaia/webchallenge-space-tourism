@@ -37,6 +37,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    overflow-x: hidden;
 
     @include breakpoint-max($max-mobile) {
         background-image: url('./../assets/#{$page-name}/background-#{$page-name}-mobile.jpg');
