@@ -1,0 +1,44 @@
+.titleContainer {
+    font-family: $heading-sm;
+    text-transform: uppercase;
+
+    .title {
+        display: flex;
+        flex-direction: row;
+        color: $white;
+        font-weight: 400;
+    }
+
+    .number {
+        font-weight: bold;
+        color: rgba($color: $white, $alpha: .25);
+    }
+
+    @include breakpoint-max($max-mobile) {
+        .title {
+            gap: 1.125rem;
+            font-size: 1rem;
+            line-height: auto;
+            letter-spacing: 15%;
+            justify-content: center;
+        }
+    }
+
+    @include breakpoint-min-max($min-tablet, $max-tablet) {
+        .title {
+            gap: 1.5rem;
+            font-size: 1.25rem;
+            line-height: auto;
+            letter-spacing: 15%;
+        }
+    }
+
+    @include breakpoint-min($min-desktop) {
+        .title {
+            gap: 1.5rem;
+            font-size: 1.75rem;
+            line-height: auto;
+            letter-spacing: 0.25rem;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.cardContainer {
+    .crewInfo {
+        .infoText {
+            .role {
+                font-family: $heading-big-simple;
+                color: rgba($color: $white, $alpha: .5);
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+
+            .name {
+                font-family: $heading-big-simple;
+                color: $white;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+
+            .bio {
+                font-family: $heading-sm-simple;
+                color: $ice;
+            }
+        }
+    }
+
+    .tabs {
+        display: flex;
+        gap: 40px;
+        .tabsButton {
+            border-radius: 99px;
+            padding: 1rem;
+            color: $white;
+            background-color: $white;
+
+            &.active {
+                background-color: red;
+            }
+        }
+    }
+}
