@@ -14,13 +14,12 @@ export default function CrewCard() {
             <div className={styles.tabs}>
                 {crew.map((staff) => (
                     <button 
-                        onClick={() => setSelectedCrew(staff)}
-                        className={`
-                            ${styles.tabsButton}
-                            ${selectedCrew.name === staff.name ? styles.active : ''}
-                        `}
-                    >
-                    </button>
+                    className={`
+                        ${styles.tabsButton}
+                        ${selectedCrew.name === staff.name ? styles.active : ''}
+                    `}
+                    onClick={() => setSelectedCrew(staff)}
+                    / >
                 ))}
             </div>
 

@@ -29,10 +29,19 @@
             border-radius: 99px;
             padding: 1rem;
             color: $white;
-            background-color: $white;
+            background-color: rgba($color: $white, $alpha: .17);
+            transition: background-color 0.3s ease;
 
             &.active {
-                background-color: red;
+                background-color: rgba($color: $white, $alpha: 1);
+
+                &:hover {
+                    background-color: rgba($color: $white, $alpha: 1);
+                }
+            }
+
+            &:hover {
+                background-color: rgba($color: $white, $alpha: .5);
             }
         }
     }
