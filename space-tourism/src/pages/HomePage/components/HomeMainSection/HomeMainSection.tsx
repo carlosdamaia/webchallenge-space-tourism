@@ -1,8 +1,16 @@
 import styles from './HomeMainSection.module.scss'
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function HomeMainSection() {
     return(
-        <section className={styles.mainSection}>
+        <AnimatePresence mode='wait'>
+        <motion.div 
+            className={styles.mainSection}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+        >
             <div className={styles.textDiv}>
 
                 <p className={styles.callout}>
@@ -26,6 +34,8 @@ export default function HomeMainSection() {
                     Explore
                 </button>
             </div>
-        </section>
+        </motion.div>
+
+        </AnimatePresence>
     )
 }

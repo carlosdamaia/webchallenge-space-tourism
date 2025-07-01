@@ -3,6 +3,7 @@ import data from '../../../../../../starter-code/data.json'
 import { useState } from 'react';
 import { planetImages } from '../../../../types/images';
 import TabsButton from '../TabsButton/TabsButton';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const destinations = data.destinations;
 
@@ -10,7 +11,16 @@ export default function Card() {
     const [selectedPlanet, setSelectedPlanet] = useState(destinations[0]);
 
     return (
-        <div className={styles.cardContainer}>
+        <AnimatePresence mode='wait'>
+
+        <motion.div  
+            key={selectedPlanet.name}
+            className={styles.cardContainer}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+        >
             <div className={styles.planetImg}>
                 <img 
                     className={styles.planetPng}
@@ -59,6 +69,7 @@ export default function Card() {
 
                 </div>
             </div>
-        </div>
+        </motion.div>
+        </AnimatePresence>
     )
 }

@@ -108,7 +108,7 @@
     }
 
     .techInfo {
-        padding: 0 1.5rem;
+        padding: 0 8rem;
         order: 2;
         text-align: center;
         @include flex-column;
@@ -142,6 +142,8 @@
         padding-top: 64px;
         width: 100vw;
         align-self: center;
+        display: flex;
+        justify-content: center;
 
         .image {
             min-height: 357px;

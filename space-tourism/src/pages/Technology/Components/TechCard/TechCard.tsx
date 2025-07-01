@@ -3,6 +3,7 @@ import data from '../../../../../../starter-code/data.json'
 import { useState } from 'react';
 import { technologyImages } from '../../../../types/images';
 import { isMobile } from '../../../../utils/utils';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const technology = data.technology;
 
@@ -10,7 +11,16 @@ export default function TechCard() {
     const [selectedTech, setselectedTech] = useState(technology[0])
 
     return (
-        <div className={styles.cardContainer}>
+        <AnimatePresence mode='wait'>
+
+        <motion.div 
+            key={selectedTech.name}
+            className={styles.cardContainer}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+        >
             <div className={styles.techInfo}>
                 <div className={styles.tabs}>
                     {technology.map((tech, index) => (
@@ -49,6 +59,7 @@ export default function TechCard() {
                     : technologyImages[selectedTech.name].portrait} 
                 />
             </div>
-        </div>
+        </motion.div>
+        </AnimatePresence>
     )
 }
