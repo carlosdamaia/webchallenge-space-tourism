@@ -44,7 +44,7 @@ export default function TechCard() {
                 </div>
             </div>
             <div className={styles.imageContainer}>
-                <img src={isMobile() 
+                <img className={styles.image} src={isMobile() 
                     ? technologyImages[selectedTech.name].landscape 
                     : technologyImages[selectedTech.name].portrait} 
                 />
