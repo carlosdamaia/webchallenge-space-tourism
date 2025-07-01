@@ -14,7 +14,7 @@ export default function Card() {
         <AnimatePresence mode='wait'>
 
         <motion.div  
-            key={selectedPlanet.name}
+            
             className={styles.cardContainer}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
