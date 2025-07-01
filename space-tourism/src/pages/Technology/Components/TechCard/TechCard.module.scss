@@ -35,7 +35,7 @@
     border: 1px solid rgba($color: $white, $alpha: .25);
     width: 15px;
     height: 15px;
-    border-radius: 30px;
+    border-radius: 99px;
 
     &.active {
         color: $dark-blue;
@@ -98,8 +98,6 @@
         width: 40px;
         height: 40px;
         font-size: 18px;
-
-        
     }
 }
 
@@ -164,5 +162,60 @@
 }
 
 @include breakpoint-min($min-desktop) {
-    
+    .cardContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .techInfo {
+        padding: 0 1.5rem;
+        order: 1;
+        @include flex-row;
+        gap: 64px;
+        align-self: center;
+        
+        .explanation {
+            @include flex-column;
+            gap: 24px;
+        }
+
+        .rankAndName {
+            @include flex-column;
+            gap: 16px;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h1 {
+                font-size: 56px;
+            }
+        }
+
+        .text {
+            font-size: 18px;
+        }
+    }
+
+    .imageContainer {
+        order: 2;
+
+        .image {
+            min-height: 600px;
+            width: 100%;
+        }
+    }
+
+    .tabs {
+        @include flex-column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .tabsButton {
+        width: 80px;
+        height: 80px;
+        font-size: 2rem;
+    }
 }
