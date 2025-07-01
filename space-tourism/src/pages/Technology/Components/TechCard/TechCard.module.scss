@@ -36,6 +36,11 @@
     width: 15px;
     height: 15px;
     border-radius: 30px;
+
+    &.active {
+        color: $dark-blue;
+        background-color: $white;
+    }
 }
 
 @include breakpoint-max($max-mobile) {
@@ -94,15 +99,68 @@
         height: 40px;
         font-size: 18px;
 
-        &.active {
-            color: $dark-blue;
-            background-color: $white;
-        }
+        
     }
 }
 
 @include breakpoint-min-max($min-tablet, $max-tablet) {
-    
+    .cardContainer {
+        @include flex-column;
+        gap: 2rem;
+    }
+
+    .techInfo {
+        padding: 0 1.5rem;
+        order: 2;
+        text-align: center;
+        @include flex-column;
+        gap: 40px;
+
+        .explanation {
+            @include flex-column;
+            gap: 16px;
+        }
+
+        .rankAndName {
+            @include flex-column;
+            gap: 16px;
+
+            h2 {
+                font-size: 24px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+        }
+
+        .text {
+            font-size: 16px;
+        }
+    }
+
+    .imageContainer {
+        order: 1;
+        padding-top: 64px;
+        width: 100vw;
+        align-self: center;
+
+        .image {
+            min-height: 357px;
+        }
+    }
+
+    .tabs {
+        @include flex-row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .tabsButton {
+        width: 56px;
+        height: 56px;
+        font-size: 24px;
+    }
 }
 
 @include breakpoint-min($min-desktop) {

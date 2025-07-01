@@ -4,13 +4,14 @@
     @include breakpoint-max($max-mobile) {
         @include flex-column;
         gap: 1.5rem;
-        //padding: 1.5rem;
+        padding: 1.5rem 0;
     }
 
     @include breakpoint-min-max($min-tablet, $max-tablet) {
         @include flex-column;
         gap: 1.5rem;
-        padding: 2.5rem;
+        padding: 2.5rem 0;
+
     }
 
     @include breakpoint-min($min-desktop) {
