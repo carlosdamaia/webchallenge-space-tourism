@@ -4,6 +4,7 @@
         width: 100%;
         background-color: $white;
         opacity: .25;
+        margin: 24px 0;
     }
 
     @include breakpoint-max($max-mobile) {
@@ -12,7 +13,7 @@
         align-items: center;
         text-align: center;
         gap: 2rem;
-        justify-content: center;
+        justify-content: space-evenly;
 
         .planetInfo {
             @include flex-column;
@@ -43,14 +44,16 @@
         .planetInfo {
             @include flex-column;
             gap: 24px;
-
-            
         }
 
         .detailsContainer {
             display: flex;
             gap: 24px;
             justify-content: space-around;
+        }
+
+        .divider {
+            margin: 24px 0;
         }
     }
     
@@ -80,6 +83,7 @@
             width: 100%;
             background-color: $white;
             opacity: .25;
+            
         }
 
         .detailsContainer {
@@ -91,25 +95,6 @@
                 @include flex-column;
                 width: 100%;
                 gap: 12px;
-            }
-        }
-    }
-
-    .planetImg {
-        .planetPng {
-            @include breakpoint-max($max-mobile) {
-                width: 170px;
-                height: 170px;
-            }
-
-            @include breakpoint-min-max($min-tablet, $max-tablet) {
-                max-width: 300px;
-                max-height: 300px;
-            }
-
-            @include breakpoint-min($min-desktop) {
-                width: auto;
-                height: auto;
             }
         }
     }
