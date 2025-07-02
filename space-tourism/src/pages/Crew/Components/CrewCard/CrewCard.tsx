@@ -3,6 +3,7 @@ import data from '../../../../../../starter-code/data.json'
 import { useState } from 'react';
 import { crewImages } from '../../../../types/images';
 import { AnimatePresence, motion } from 'framer-motion';
+import AnimaImage from '../../../../components/AnimaImage/AnimaImage';
 
 const crew = data.crew;
 
@@ -48,13 +49,14 @@ export default function CrewCard() {
                         ))}
                     </div>
                 </div>
-
                 
-                <div className={styles.imageContainer}>
-                    <div className={styles.wrapper}>
-                        <img className={styles.crewImg} src={crewImages[selectedCrew.name]} />
-                    </div>
-                </div>
+                <AnimaImage 
+                    imageSrc={crewImages[selectedCrew.name]}
+                    imageAlt=''
+                    wrapperClassName={styles.wrapper}
+                    imageClassName={styles.crewImg}
+                    uniqueKey={selectedCrew.name}
+                />
             </motion.div>
         </AnimatePresence>
     )
