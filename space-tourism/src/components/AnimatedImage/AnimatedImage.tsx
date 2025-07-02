@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import styles from './AnimatedImage.module.scss';
 
 interface AnimatedImageProps {
+    className?: string;
     imageSrc: string;
     imageAlt: string;
     wrapperClassName?: string;
@@ -10,6 +11,7 @@ interface AnimatedImageProps {
 }
 
 export default function AnimatedImage({
+    className = '',
     imageSrc,
     imageAlt = '',
     wrapperClassName = '',
@@ -17,18 +19,18 @@ export default function AnimatedImage({
     uniqueKey = imageSrc,
 }: AnimatedImageProps ) {
     return (
-        <div className={`${styles.animatedImage} ${wrapperClassName}`}>
+        <div className={`${wrapperClassName}`}>
             <AnimatePresence mode="wait">
                 <motion.div
                     key={uniqueKey}
-                    className={styles.planetImg}
+                    className={className}
                     initial={{ x: 300, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: -300, opacity: 0 }}
                     transition={{ duration: 0.4 }}
                 >
                     <img
-                        className={`${styles.planetPng} ${imageClassName}`}
+                        className={`${imageClassName}`}
                         src={imageSrc}
                         alt={imageAlt}
                     />

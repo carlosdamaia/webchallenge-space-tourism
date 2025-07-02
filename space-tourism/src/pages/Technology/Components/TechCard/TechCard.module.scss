@@ -79,12 +79,20 @@
         }
     }
 
+    
+
     .imageContainer {
         order: 1;
         padding-top: 64px;
-
-        .image {
-            min-height: 258px;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        
+        .animatedImage {
+            width: 100vw;
+            .image {
+                width: 100%;
+            }
         }
     }
 
@@ -137,16 +145,19 @@
         }
     }
 
+    
     .imageContainer {
         order: 1;
         padding-top: 64px;
-        width: 100vw;
         align-self: center;
         display: flex;
         justify-content: center;
-
-        .image {
-            min-height: 357px;
+        
+        .animatedImage {
+            width: 100vw;
+            .image {
+                width: 100%;
+            }
         }
     }
 
