@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "framer-motion";
-import styles from './AnimaImage.module.scss';
+import styles from './AnimatedImage.module.scss';
 
 interface AnimatedImageProps {
     imageSrc: string;
@@ -9,7 +9,7 @@ interface AnimatedImageProps {
     uniqueKey?: string;
 }
 
-export default function AnimaImage({
+export default function AnimatedImage({
     imageSrc,
     imageAlt = '',
     wrapperClassName = '',

@@ -3,7 +3,7 @@ import data from '../../../../../../starter-code/data.json'
 import { useState } from 'react';
 import { crewImages } from '../../../../types/images';
 import { AnimatePresence, motion } from 'framer-motion';
-import AnimaImage from '../../../../components/AnimaImage/AnimaImage';
+import AnimatedImage from '../../../../components/AnimatedImage/AnimatedImage';
 
 const crew = data.crew;
 
@@ -50,7 +50,7 @@ export default function CrewCard() {
                     </div>
                 </div>
                 
-                <AnimaImage 
+                <AnimatedImage 
                     imageSrc={crewImages[selectedCrew.name]}
                     imageAlt=''
                     wrapperClassName={styles.wrapper}
