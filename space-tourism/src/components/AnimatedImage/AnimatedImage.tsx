@@ -1,4 +1,6 @@
 import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+import LoadingImg from "../LoadingImg/LoadingImg";
 
 interface AnimatedImageProps {
     className?: string;
@@ -35,23 +37,37 @@ export default function AnimatedImage({
         [animationOrientation]: -300,
     };
 
+    const [isLoaded, setIsLoaded] = useState(false);
+
     return (
+        
         <div className={`${wrapperClassName}`}>
+            {!isLoaded && <LoadingImg />}
+
+            <img
+                src={imageSrc}
+                alt={imageAlt}
+                onLoad={() => setIsLoaded(true)}
+                style={{ display: 'none' }}
+            />
+
             <AnimatePresence mode="wait">
-                <motion.div
-                    key={uniqueKey}
-                    className={className}
-                    initial={initial}
-                    animate={animate}
-                    exit={exit}
-                    transition={{ duration: 0.4 }}
-                >
-                    <img
-                        className={`${imageClassName}`}
-                        src={imageSrc}
-                        alt={imageAlt}
-                    />
-                </motion.div>
+                {isLoaded && (
+                    <motion.div
+                        key={uniqueKey}
+                        className={className}
+                        initial={initial}
+                        animate={animate}
+                        exit={exit}
+                        transition={{ duration: 0.4 }}
+                    >
+                        <img
+                            className={`${imageClassName}`}
+                            src={imageSrc}
+                            alt={imageAlt}
+                        />
+                    </motion.div>
+                )}
             </AnimatePresence>
         </div>
     );
