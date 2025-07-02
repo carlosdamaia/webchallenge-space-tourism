@@ -52,6 +52,7 @@
     display: inline-block;
     overflow: hidden;
     margin: 0 auto;
+    align-content: center;
 
     img {
       display: block;
@@ -111,6 +112,8 @@
     .bio {
       font-size: 0.938rem;
       line-height: 180%;
+      min-height: 135px;
+      align-content: center;
     }
 
     .tabs {
@@ -129,6 +132,7 @@
     .crewInfo {
       @include flex-column;
       gap: 24px;
+      min-height: 300px;
     }
 
     .infoText {
@@ -142,8 +146,7 @@
       justify-content: center;
 
       .crewImg {
-        max-height: 560px;
-        max-width: 446px;
+        max-height: 645px;
       }
     }
 
@@ -158,6 +161,8 @@
     .bio {
       font-size: 1rem;
       line-height: 180%;
+      min-height: 90px;
+      align-content: center;
     }
 
     .tabs {
@@ -177,6 +182,7 @@
     .crewInfo {
       @include flex-column;
       gap: 40px;
+      min-height: 720px;
     }
 
     .infoText {

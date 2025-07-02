@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from "framer-motion";
-import styles from './AnimatedImage.module.scss';
 
 interface AnimatedImageProps {
     className?: string;
