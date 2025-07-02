@@ -42,13 +42,13 @@ npm run build
 
 ✨ Funcionalidades
 
-    Navegação entre páginas (Home, Destino, Tripulação e Tecnologia)
+   - Navegação entre páginas (Home, Destino, Tripulação e Tecnologia)
 
-    Layout responsivo (Mobile, Tablet e Desktop)
+   - Layout responsivo (Mobile, Tablet e Desktop)
 
-    Transições animadas entre conteúdos
+   - Transições animadas entre conteúdos
 
-    Componente reutilizável de tabs e imagens animadas
+   - Componente reutilizável de tabs e imagens animadas
 
 📁 Dados
 
