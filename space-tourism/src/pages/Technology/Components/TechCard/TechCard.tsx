@@ -5,11 +5,12 @@ import { technologyImages } from '../../../../types/images';
 import { isMobile } from '../../../../utils/utils';
 import AnimatedImage from '../../../../components/AnimatedImage/AnimatedImage';
 import AnimatedInfo from '../../../../components/AnimatedInfo/AnimatedInfo';
+import Tabs from '../../../../components/Tabs/Tabs';
 
 const technology = data.technology;
 
 export default function TechCard() {
-    const [selectedTech, setselectedTech] = useState(technology[0])
+    const [selectedTech, setSelectedTech] = useState(technology[0])
     const selectedImg = technologyImages[selectedTech.name]
     const animationOrientation = isMobile() ? undefined : 'y';
     const imageSrc = isMobile() ? selectedImg.landscape : selectedImg.portrait;
@@ -19,18 +20,16 @@ export default function TechCard() {
             className={styles.cardContainer}
         >
             <div className={styles.techInfo}>
-                <div className={styles.tabs}>
-                    {technology.map((tech, index) => (
-                        <button 
-                            key={tech.name}
-                            className={`
-                                ${styles.tabsButton}
-                                ${selectedTech.name === tech.name ? styles.active : ''}
-                            `}
-                            onClick={() => setselectedTech(tech)}
-                        >{index + 1}</button>
-                    ))}
-                </div>
+                <Tabs 
+                    items={technology}
+                    selectedItem={selectedTech}
+                    onSelect={setSelectedTech}
+                    getKey={(tech) => tech.name}
+                    className={styles.tabs}
+                    buttonClassName={styles.tabsButton}
+                    activeClassName={styles.active}
+                    renderButtonContent={(tech, index) => index + 1}
+                />
 
                 <AnimatedInfo 
                     key={selectedTech.name}

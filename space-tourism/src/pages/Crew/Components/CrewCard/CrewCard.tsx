@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { crewImages } from '../../../../types/images';
 import AnimatedImage from '../../../../components/AnimatedImage/AnimatedImage';
 import AnimatedInfo from '../../../../components/AnimatedInfo/AnimatedInfo';
+import Tabs from '../../../../components/Tabs/Tabs';
 
 const crew = data.crew;
 
@@ -32,18 +33,15 @@ export default function CrewCard() {
                         </p>
                     </div>
                 </AnimatedInfo>
-                <div className={styles.tabs}>
-                    {crew.map((staff, index) => (
-                        <button 
-                            key={staff.name}
-                            className={`
-                                ${styles.tabsButton}
-                                ${selectedCrew.name === staff.name ? styles.active : ''}
-                            `}
-                            onClick={() => setSelectedCrew(staff)}
-                        />
-                    ))}
-                </div>
+                <Tabs
+                    items={crew}
+                    selectedItem={selectedCrew}
+                    onSelect={setSelectedCrew}
+                    getKey={(staff) => staff.name}
+                    className={styles.tabs}
+                    buttonClassName={styles.tabsButton}
+                    activeClassName={styles.active}
+                />
             </div>
 
             <AnimatedImage 
