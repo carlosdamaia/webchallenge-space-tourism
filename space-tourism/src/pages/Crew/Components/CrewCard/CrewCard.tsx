@@ -1,10 +1,10 @@
-import styles from './CrewCard.module.scss'
-import data from '../../../../../../starter-code/data.json'
+import styles from './CrewCard.module.scss';
+import data from '@/assets/data.json';
 import { useState } from 'react';
-import { crewImages } from '../../../../types/images';
+import { crewImages } from '@/types/images';
 import AnimatedImage from '../../../../components/AnimatedImage/AnimatedImage';
 import AnimatedInfo from '../../../../components/AnimatedInfo/AnimatedInfo';
-import Tabs from '../../../../components/Tabs/Tabs';
+import Tabs from '@/components/Tabs/Tabs';
 
 const crew = data.crew;
 

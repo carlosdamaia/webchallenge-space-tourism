@@ -1,11 +1,11 @@
 import styles from './TechCard.module.scss'
-import data from '../../../../../../starter-code/data.json'
+import data from '@/assets/data.json'
 import { useState } from 'react';
-import { technologyImages } from '../../../../types/images';
-import { isMobile } from '../../../../utils/utils';
-import AnimatedImage from '../../../../components/AnimatedImage/AnimatedImage';
-import AnimatedInfo from '../../../../components/AnimatedInfo/AnimatedInfo';
-import Tabs from '../../../../components/Tabs/Tabs';
+import { technologyImages } from '@/types/images';
+import { isMobile } from '@/utils/utils';
+import AnimatedImage from '@/components/AnimatedImage/AnimatedImage';
+import AnimatedInfo from '@/components/AnimatedInfo/AnimatedInfo';
+import Tabs from '@/components/Tabs/Tabs';
 
 const technology = data.technology;
 

@@ -1,10 +1,10 @@
 import styles from './Card.module.scss'
-import data from '../../../../../../starter-code/data.json'
+import data from '@/assets/data.json'
 import { useState } from 'react';
 import TabsButton from '../TabsButton/TabsButton';
 import { AnimatePresence, motion } from 'framer-motion';
 import AnimatedImage from '../../../../components/AnimatedImage/AnimatedImage';
-import { planetImages } from '../../../../types/images';
+import { planetImages } from '@/types/images';
 
 const destinations = data.destinations;
 
