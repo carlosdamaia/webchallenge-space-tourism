@@ -18,19 +18,23 @@ Este é um projeto desenvolvido com **React + TypeScript + SCSS Modules** basead
 
 ---
 
-## 🚀 Como rodar o projeto localmente
+## 🚀 Como rodar localmente
 
 1. Clone o repositório:
-   ```bash
+   ```
    git clone https://github.com/carlosdamaia/webchallenge-space-tourism
+   ```
 
-    Instale as dependências:
+   Instale as dependências:
 
-npm install
-
-Rode o projeto:
-
-    npm run dev
+   ```
+   npm install
+   ```
+   Rode o projeto:
+   
+   ```
+   npm run dev
+   ```
 
 📦 Build para produção
 
@@ -48,6 +52,4 @@ npm run build
 
 📁 Dados
 
-Os dados estão localizados no arquivo:
-
-src/assets/data.json
+Os dados estão localizados no arquivo `src/assets/data.json`:
