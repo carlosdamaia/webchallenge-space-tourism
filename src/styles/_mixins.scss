@@ -38,16 +38,17 @@
     background-attachment: fixed;
     background-position: center;
     overflow-x: hidden;
+    image-rendering: auto;
 
     @include breakpoint-max($max-mobile) {
-        background-image: url('./../assets/#{$page-name}/background-#{$page-name}-mobile.jpg');
+        background-image: url('../assets/#{$page-name}/background-#{$page-name}-mobile.jpg');
     }
     
     @include breakpoint-min-max($min-tablet, $max-tablet) {
-        background-image: url('./../assets/#{$page-name}/background-#{$page-name}-tablet.jpg');
+        background-image: url('../assets/#{$page-name}/background-#{$page-name}-tablet.jpg');
     }
     
     @include breakpoint-min($min-desktop) {
-        background-image: url('./../assets/#{$page-name}/background-#{$page-name}-desktop.jpg');
+        background-image: url('../assets/#{$page-name}/background-#{$page-name}-desktop.jpg');
     }
 }
