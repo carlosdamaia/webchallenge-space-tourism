@@ -11,7 +11,6 @@ export default function Card() {
     const [selectedPlanet, setSelectedPlanet] = useState(destinations[0]);
 
     return (
-
         <div className={styles.cardContainer}>
             <AnimatedImage selectedPlanet={selectedPlanet} />
 

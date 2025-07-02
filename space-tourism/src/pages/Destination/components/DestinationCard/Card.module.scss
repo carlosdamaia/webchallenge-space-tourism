@@ -7,16 +7,20 @@
         margin: 24px 0;
     }
 
+    .planetInfo {
+        justify-content: space-between;
+    }
+
     @include breakpoint-max($max-mobile) {
         flex: 1;
         @include flex-column;
         align-items: center;
         text-align: center;
         gap: 2rem;
-        justify-content: space-evenly;
 
         .planetInfo {
             @include flex-column;
+            justify-content: space-between;
             gap: 24px;
 
             .planetMainInfo {
@@ -35,7 +39,7 @@
     @include breakpoint-min-max($min-tablet, $max-tablet) {
         flex: 1;
         @include flex-column;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
         text-align: center;
         gap: 8px;
@@ -43,6 +47,7 @@
 
         .planetInfo {
             @include flex-column;
+            justify-content: space-between;
             gap: 24px;
         }
 
@@ -192,6 +197,9 @@
                 font-size: 1.125rem;
                 line-height: 180%;
                 letter-spacing: 0px;
+                min-height: 170px;
+                display: flex;
+                align-items: center;
             }
 
             .detailsTitle {
