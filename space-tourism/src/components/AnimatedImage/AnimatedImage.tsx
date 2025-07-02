@@ -8,6 +8,7 @@ interface AnimatedImageProps {
     wrapperClassName?: string;
     imageClassName?: string;
     uniqueKey?: string;
+    animationOrientation?: 'x' | 'y';
 }
 
 export default function AnimatedImage({
@@ -17,16 +18,33 @@ export default function AnimatedImage({
     wrapperClassName = '',
     imageClassName = '',
     uniqueKey = imageSrc,
+    animationOrientation = 'x'
 }: AnimatedImageProps ) {
+
+    const initial = {
+        opacity: 0,
+        [animationOrientation]: 300,
+    };
+
+    const animate = {
+        opacity: 1,
+        [animationOrientation]: 0,
+    };
+
+    const exit = {
+        opacity: 0,
+        [animationOrientation]: -300,
+    };
+
     return (
         <div className={`${wrapperClassName}`}>
             <AnimatePresence mode="wait">
                 <motion.div
                     key={uniqueKey}
                     className={className}
-                    initial={{ x: 300, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: -300, opacity: 0 }}
+                    initial={initial}
+                    animate={animate}
+                    exit={exit}
                     transition={{ duration: 0.4 }}
                 >
                     <img

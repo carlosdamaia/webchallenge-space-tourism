@@ -16,6 +16,6 @@
     @include breakpoint-min($min-desktop) {
         @include flex-column;
         gap: 1.5rem;
-        padding: 3rem;
+        padding: 3rem 0 3rem 3rem;
     }
 }

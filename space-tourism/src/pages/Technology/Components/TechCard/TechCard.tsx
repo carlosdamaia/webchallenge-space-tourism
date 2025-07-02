@@ -5,14 +5,14 @@ import { technologyImages } from '../../../../types/images';
 import { isMobile } from '../../../../utils/utils';
 import { AnimatePresence, motion } from 'framer-motion';
 import AnimatedImage from '../../../../components/AnimatedImage/AnimatedImage';
-import { style } from 'framer-motion/client';
 
 const technology = data.technology;
 
 export default function TechCard() {
     const [selectedTech, setselectedTech] = useState(technology[0])
     const selectedImg = technologyImages[selectedTech.name]
-    const imageSrc = isMobile() ? selectedImg.landscape : selectedImg.portrait
+    const animationOrientation = isMobile() ? undefined : 'y';
+    const imageSrc = isMobile() ? selectedImg.landscape : selectedImg.portrait;
 
     return (
         <AnimatePresence mode='wait'>
@@ -65,6 +65,7 @@ export default function TechCard() {
                 wrapperClassName={styles.imageContainer}
                 imageClassName={styles.image}
                 uniqueKey={selectedTech.name}
+                animationOrientation={animationOrientation}
             />
 
         </motion.div>
