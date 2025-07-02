@@ -16,6 +16,7 @@ export default function CrewCard() {
                 <AnimatedInfo 
                     key={selectedCrew.name}
                     className={styles.infoText}
+                    duration={.6}
                 >
                     <div className={styles.presentation}>
                         <h2 className={styles.role}>
@@ -32,7 +33,7 @@ export default function CrewCard() {
                     </div>
                 </AnimatedInfo>
                 <div className={styles.tabs}>
-                    {crew.map((staff) => (
+                    {crew.map((staff, index) => (
                         <button 
                             key={staff.name}
                             className={`
@@ -53,55 +54,5 @@ export default function CrewCard() {
                 uniqueKey={selectedCrew.name}
             />
         </div>
-        /*
-        <AnimatePresence mode='wait'>
-            <motion.div 
-                key={selectedCrew.name}
-                className={styles.cardContainer}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4 }}
-            >
-                <div className={styles.crewInfo}>
-                    <div className={styles.infoText}>
-                        <div className={styles.presentation}>
-                            <h2 className={styles.role}>
-                                {selectedCrew.role}
-                            </h2>
-                            <h3 className={styles.name}>
-                                {selectedCrew.name}
-                            </h3>
-                        </div>
-                        <div className={styles.text}>
-                            <p className={styles.bio}>
-                                {selectedCrew.bio}
-                            </p>
-                        </div>
-                    </div>
-                    <div className={styles.tabs}>
-                        {crew.map((staff) => (
-                            <button 
-                                key={staff.name}
-                                className={`
-                                    ${styles.tabsButton}
-                                    ${selectedCrew.name === staff.name ? styles.active : ''}
-                                `}
-                                onClick={() => setSelectedCrew(staff)}
-                            />
-                        ))}
-                    </div>
-                </div>
-                
-                <AnimatedImage 
-                    imageSrc={crewImages[selectedCrew.name]}
-                    imageAlt=''
-                    wrapperClassName={styles.wrapper}
-                    imageClassName={styles.crewImg}
-                    uniqueKey={selectedCrew.name}
-                />
-            </motion.div>
-        </AnimatePresence>
-        */
     )
 }

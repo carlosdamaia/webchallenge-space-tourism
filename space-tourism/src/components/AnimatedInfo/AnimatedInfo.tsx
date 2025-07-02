@@ -5,6 +5,7 @@ interface AnimatedInfoProps {
     className?: string;
     uniqueKey?: string;
     animationOrientation?: 'x' | 'y';
+    duration?: number;
 }
 
 export default function AnimatedInfo({
@@ -12,6 +13,7 @@ export default function AnimatedInfo({
     className = '',
     uniqueKey,
     animationOrientation = 'x',
+    duration = 0.4
 }: AnimatedInfoProps ) {
 
     const initial = {
@@ -37,7 +39,7 @@ export default function AnimatedInfo({
                 initial={initial}
                 animate={animate}
                 exit={exit}
-                transition={{ duration: 0.4 }}
+                transition={{ duration }}
             >
                 {children}
             </motion.div>

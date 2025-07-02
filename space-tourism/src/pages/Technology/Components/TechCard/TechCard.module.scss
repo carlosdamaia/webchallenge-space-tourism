@@ -189,10 +189,11 @@
         @include flex-row;
         gap: 64px;
         align-self: center;
+        height: 100%;
         
         .explanation {
             @include flex-column;
-            justify-content: space-around;
+            justify-content: center;
             gap: 24px;
         }
 

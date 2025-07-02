@@ -3,8 +3,8 @@ import data from '../../../../../../starter-code/data.json'
 import { useState } from 'react';
 import { technologyImages } from '../../../../types/images';
 import { isMobile } from '../../../../utils/utils';
-import { AnimatePresence, motion } from 'framer-motion';
 import AnimatedImage from '../../../../components/AnimatedImage/AnimatedImage';
+import AnimatedInfo from '../../../../components/AnimatedInfo/AnimatedInfo';
 
 const technology = data.technology;
 
@@ -15,15 +15,8 @@ export default function TechCard() {
     const imageSrc = isMobile() ? selectedImg.landscape : selectedImg.portrait;
 
     return (
-        <AnimatePresence mode='wait'>
-
-        <motion.div 
-            //key={selectedTech.name}
+        <div 
             className={styles.cardContainer}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.4 }}
         >
             <div className={styles.techInfo}>
                 <div className={styles.tabs}>
@@ -39,7 +32,12 @@ export default function TechCard() {
                     ))}
                 </div>
 
-                <div className={styles.explanation}>
+                <AnimatedInfo 
+                    key={selectedTech.name}
+                    className={styles.explanation}
+                    animationOrientation={animationOrientation}
+                    duration={.8}
+                >
                     <div className={styles.rankAndName}>
                         <div className={styles.fixedTitle}>
                             <h2>the terminology...</h2>
@@ -55,7 +53,7 @@ export default function TechCard() {
                             {selectedTech.description}
                         </p>
                     </div>
-                </div>
+                </AnimatedInfo>
             </div>
             
             <AnimatedImage 
@@ -68,16 +66,6 @@ export default function TechCard() {
                 animationOrientation={animationOrientation}
             />
 
-        </motion.div>
-        </AnimatePresence>
-
-    /*
-    <div className={styles.imageContainer}>
-        <img className={styles.image} src={isMobile() 
-            ? technologyImages[selectedTech.name].landscape 
-            : technologyImages[selectedTech.name].portrait} 
-        />
-    </div>
-    */
+        </div>
     )
 }
